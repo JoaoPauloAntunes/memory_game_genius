@@ -5,7 +5,5 @@
 <p>The game circuit can be found on TINKERCAD:</p>
 <p>https://www.tinkercad.com/things/6EbvTMHYBED</p>
 
-<iframe width="725" height="453" src="https://www.tinkercad.com/embed/6EbvTMHYBED?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
-
-<img src="https://csg.tinkercad.com/things/6EbvTMHYBED/t725.png?rev=1609536366398000000&s=&v=1&type=circuits">
-
+<img src="https://csg.tinkercad.com/things/6EbvTMHYBED/t725.png?rev=1609536366398000000&s=&v=1&type=circuits" href="https://www.tinkercad.com/embed/6EbvTMHYBED?editbtn=1">
+<img src="https://www.tinkercad.com/embed/6EbvTMHYBED?editbtn=1">
