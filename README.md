@@ -4,3 +4,4 @@
 <p>https://www.voujogar.com.br/jogos/genius</p>
 <p>The game circuit can be found on TINKERCAD:</p>
 <p>https://www.tinkercad.com/things/6EbvTMHYBED</p>
+<img src="https://csg.tinkercad.com/things/6EbvTMHYBED/t725.png?rev=1609534827718000000&s=&v=1&type=circuits">
