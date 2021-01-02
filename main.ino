@@ -21,15 +21,15 @@ String sequence = "";
 int sequenceSize = 0;
 int i = 0;
 
-bool isBtnRNonPressed = false;
-bool isBtnGNonPressed = false;
-bool isBtnBNonPressed = false;
-bool isBtnYNonPressed = false;
+bool isNotPressedBtnR = false;
+bool isNotPressedBtnG = false;
+bool isNotPressedBtnB = false;
+bool isNotPressedBtnY = false;
 
-bool hasBtnRNonPressed = true; 
-bool hasBtnGNonPressed = true;
-bool hasBtnBNonPressed = true;
-bool hasBtnYNonPressed = true;
+bool hasNotPressedBtnR = true; 
+bool hasNotPressedBtnG = true;
+bool hasNotPressedBtnB = true;
+bool hasNotPressedBtnY = true;
 
 void setup()
 {
@@ -76,65 +76,65 @@ void loop()
   sequenceSize = sequence.length();
   while(i < sequenceSize) {                     // aguardar usuário pressionar botões até errar ou acertar a sequência
 
-    isBtnRNonPressed = digitalRead(BTN_R);
-    if (isBtnRNonPressed) {                     // se o botão não está pressionado
-      hasBtnRNonPressed = true;                 // tenho que o botão foi não foi pressionado
-    } else if (hasBtnRNonPressed) {             // se o botão está pressionado E tenho que ele não foi pressionado
-      hasBtnRNonPressed = false;                // agora tenho que o botão foi pressionado
+    isNotPressedBtnR = digitalRead(BTN_R);
+    if (isNotPressedBtnR) {                     // se o botão não está pressionado
+      hasNotPressedBtnR = true;                 // tenho que o botão não foi pressionado
+    } else if (hasNotPressedBtnR) {             // se o botão está pressionado E tenho que ele não foi pressionado
+      hasNotPressedBtnR = false;                // agora tenho que o botão foi pressionado
       
       blinkLed(LED_R, BLINK_TIME);
       delay(DEBAUNCE_TIME);
 
       if ('R' != sequence.charAt(i)) {          // se caractere referente ao botão não coincidir com a sequência
-        break;                                  // quebra iteração
+        break;                                  // quebrar iteração
       }
 
       i++;                                      // incrementar índice de varredura da sequência
     }
 
-    isBtnGNonPressed = digitalRead(BTN_G);
-    if (isBtnGNonPressed) {                     // se o botão não está pressionado
-      hasBtnGNonPressed = true;                 // tenho que o botão foi não foi pressionado
-    } else if (hasBtnGNonPressed) {             // se o botão está pressionado E tenho que ele não foi pressionado
-      hasBtnGNonPressed = false;                // agora tenho que o botão foi pressionado
+    isNotPressedBtnG = digitalRead(BTN_G);
+    if (isNotPressedBtnG) {                     // se o botão não está pressionado
+      hasNotPressedBtnG = true;                 // tenho que o botão não foi pressionado
+    } else if (hasNotPressedBtnG) {             // se o botão está pressionado E tenho que ele não foi pressionado
+      hasNotPressedBtnG = false;                // agora tenho que o botão foi pressionado
       
       blinkLed(LED_G, BLINK_TIME);
       delay(DEBAUNCE_TIME);
 
       if ('G' != sequence.charAt(i)) {          // se caractere referente ao botão não coincidir com a sequência
-        break;                                  // quebra iteração
+        break;                                  // quebrar iteração
       }
 
       i++;
     }
 
-    isBtnBNonPressed = digitalRead(BTN_B);
-    if (isBtnBNonPressed) {                     // se o botão não está pressionado
-      hasBtnBNonPressed = true;                 // tenho que o botão foi não foi pressionado
-    } else if (hasBtnBNonPressed) {             // se o botão está pressionado E tenho que ele não foi pressionado
-      hasBtnBNonPressed = false;                // agora tenho que o botão foi pressionado
+    isNotPressedBtnB = digitalRead(BTN_B);
+    if (isNotPressedBtnB) {                     // se o botão não está pressionado
+      hasNotPressedBtnB = true;                 // tenho que o botão não foi pressionado
+    } else if (hasNotPressedBtnB) {             // se o botão está pressionado E tenho que ele não foi pressionado
+      hasNotPressedBtnB = false;                // agora tenho que o botão foi pressionado
       
       blinkLed(LED_B, BLINK_TIME);
       delay(DEBAUNCE_TIME);
 
       if ('B' != sequence.charAt(i)) {          // se caractere referente ao botão não coincidir com a sequência
-        break;                                  // quebra iteração
+        break;                                  // quebrar iteração
       }
 
       i++;
     }
 
-    isBtnYNonPressed = digitalRead(BTN_Y);
-    if (isBtnYNonPressed) {                     // se o botão não está pressionado
-      hasBtnYNonPressed = true;                 // tenho que o botão foi não foi pressionado
-    } else if (hasBtnYNonPressed) {             // se o botão está pressionado E tenho que ele não foi pressionado
-      hasBtnYNonPressed = false;                // agora tenho que o botão foi pressionado
+    isNotPressedBtnY = digitalRead(BTN_Y);
+    if (isNotPressedBtnY) {                     // se o botão não está pressionado
+      hasNotPressedBtnY = true;                 // tenho que o botão não foi pressionado
+    } else if (hasNotPressedBtnY) {             // se o botão está pressionado E tenho que ele não foi pressionado
+      hasNotPressedBtnY = false;                // agora tenho que o botão foi pressionado
       
       blinkLed(LED_Y, BLINK_TIME);
       delay(DEBAUNCE_TIME);
 
       if ('Y' != sequence.charAt(i)) {          // se caractere referente ao botão não coincidir com a sequência
-        break;                                  // quebra iteração
+        break;                                  // quebrar iteração
       }
 
       i++;
@@ -158,7 +158,7 @@ void initPlayerStatus()
   delay(BLINK_TIME);
   Serial.println(".");
 
-  hasBtnRNonPressed = hasBtnGNonPressed = hasBtnBNonPressed = hasBtnYNonPressed = true;
+  hasNotPressedBtnR = hasNotPressedBtnG = hasNotPressedBtnB = hasNotPressedBtnY = true;
   sequence = "";
   incSequence();
 }
