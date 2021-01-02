@@ -169,34 +169,34 @@ void levelUp()
   incSequence();
 }
 
-char randomBtnCh()
+char getRandomBtnChar()
 {
-  char randomBtnCh;
+  char randomBtnChar;
 
   switch (random(4)) {
     case 0:
-      randomBtnCh = 'R';
+      randomBtnChar = 'R';
       break;
     case 1:
-      randomBtnCh = 'G';
+      randomBtnChar = 'G';
       break;
     case 2:
-      randomBtnCh = 'B';
+      randomBtnChar = 'B';
       break;
     case 3:
-      randomBtnCh = 'Y';
+      randomBtnChar = 'Y';
       break;
     default:
-      randomBtnCh = '?';
+      randomBtnChar = '?';
       break;
   }
 
-  return randomBtnCh;
+  return randomBtnChar;
 }
 
 void incSequence() 
 {
-  sequence += randomBtnCh();
+  sequence += getRandomBtnChar();
 }
 
 void showSequence()
